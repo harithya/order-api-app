@@ -1,0 +1,607 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Order Api",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "/api"
+    }
+  ],
+  "paths": {
+    "/product": {
+      "get": {
+        "summary": "Get All Product",
+        "responses": {
+          "200": {
+            "description": "200",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 12:35:01 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Product"
+        ]
+      },
+      "post": {
+        "summary": "Create Product",
+        "responses": {
+          "201": {
+            "description": "200",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 12:53:15 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          },
+          "422": {
+            "description": "422",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 12:54:14 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Product"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "integer"
+                  },
+                  "stock": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "example": {
+                "name": "Indomie Goreng Aceh",
+                "description": "Makanan paling enak sedunia",
+                "price": 10000,
+                "stock": 20
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/1": {
+      "get": {
+        "summary": "Get Product",
+        "responses": {
+          "200": {
+            "description": "200",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 12:50:22 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          },
+          "404": {
+            "description": "404",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 12:51:05 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Product"
+        ]
+      },
+      "patch": {
+        "summary": "Update Product",
+        "responses": {
+          "200": {
+            "description": "200",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 12:56:56 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Product"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "integer"
+                  },
+                  "stock": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "example": {
+                "name": "Indomie Goreng Rendang",
+                "description": "Makanan paling enak sedunia",
+                "price": 10000,
+                "stock": 20
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/4": {
+      "delete": {
+        "summary": "Delete Product",
+        "responses": {
+          "200": {
+            "description": "200",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 12:57:44 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Product"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/order": {
+      "get": {
+        "summary": "Get All Order",
+        "responses": {
+          "200": {
+            "description": "200",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 13:35:57 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Order"
+        ]
+      },
+      "post": {
+        "summary": "Create Order",
+        "responses": {
+          "201": {
+            "description": "200",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 13:35:44 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          },
+          "422": {
+            "description": "Stock out",
+            "headers": {
+              "Host": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "localhost:8000"
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "close"
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "PHP/8.4.22RC1"
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "no-cache, private"
+              },
+              "Date": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Mon, 20 Jul 2026 13:51:57 GMT"
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Order"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "customer_name": {
+                    "type": "string"
+                  },
+                  "customer_email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "customer_phone": {
+                    "type": "string",
+                    "format": "utc-millisec"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "product_id": {
+                          "type": "integer"
+                        },
+                        "quantity": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "example": {
+                "customer_name": "John Doe",
+                "customer_email": "john@example.com",
+                "customer_phone": "089777188828",
+                "items": [
+                  {
+                    "product_id": 1,
+                    "quantity": 1
+                  },
+                  {
+                    "product_id": 2,
+                    "quantity": 1
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

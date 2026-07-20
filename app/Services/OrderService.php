@@ -30,14 +30,14 @@ class OrderService
             $data['reference'] = 'ORD-' . Str::upper(Str::random(8));
 
             $totalAmount = 0;
-            $items = [];
+            $orderItemData = [];
 
             foreach ($data['items'] as $item) {
                 $product = $products->get($item['product_id']);
                 $subtotal = $product->price * $item['quantity'];
                 $totalAmount += $subtotal;
 
-                $items[] = [
+                $orderItemData[] = [
                     'product_id' => $item['product_id'],
                     'quantity' => $item['quantity'],
                     'price' => $product->price,
@@ -50,7 +50,7 @@ class OrderService
             $data['total_amount'] = $totalAmount;
 
             $order = Order::create($data);
-            $order->items()->saveMany($items);
+            $order->items()->createMany($orderItemData);
 
             return $order->load('items.product');
         });

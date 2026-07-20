@@ -1,0 +1,23 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Order;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class OrderFactory extends Factory
+{
+    protected $model = Order::class;
+
+    public function definition(): array
+    {
+        return [
+            'reference' => 'ORD-' . strtoupper(fake()->bothify('????####')),
+            'customer_name' => fake()->name(),
+            'customer_email' => fake()->email(),
+            'customer_phone' => fake()->phoneNumber(),
+            'status' => 'pending',
+            'total_amount' => 0,
+        ];
+    }
+}
