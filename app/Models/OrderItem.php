@@ -14,6 +14,8 @@ class OrderItem extends Model
         'subtotal',
     ];
 
+    public $timestamps = false;
+
     public function order()
     {
         return $this->belongsTo(Order::class);

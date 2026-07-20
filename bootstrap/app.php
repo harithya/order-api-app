@@ -26,6 +26,7 @@ return Application::configure(basePath: dirname(__DIR__))
                     $e instanceof \Illuminate\Database\Eloquent\ModelNotFoundException => 404,
                     $e instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException => 404,
                     $e instanceof \Illuminate\Validation\ValidationException => 422,
+                    $e instanceof \Symfony\Component\HttpKernel\Exception\HttpException => $e->getStatusCode(),
                     default => 500,
                 };
 
